@@ -73,7 +73,8 @@ final class Compiler(rootDir: String, completeClasspath: String, reporterCallbac
         val sett = new Settings()
         sett.classpath.value = completeClasspath
         sett.bootclasspath.value = sett.classpath.value
-        sett.outdir.value = "/tmp"
+        sett.outdir.value = System.getProperty("java.io.tmpdir")
+        //"C:\\Users\\Kathe\\AppData\\Local\\Temp"
 
         val reporter = reporterCallback(sett)
         val g = new Global(sett, reporter)
