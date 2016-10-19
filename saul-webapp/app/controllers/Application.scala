@@ -6,7 +6,6 @@
   */
 package controllers
 
-import java.io.File
 import controllers.Event._
 import edu.illinois.cs.cogcomp.saul.datamodel.DataModel
 import logging.Logger
@@ -22,7 +21,7 @@ import _root_.util._
 
 object Application {
 
-  val rootDir = System.getProperty("java.io.tmpdir")//"C:\\Users\\Kathe\\AppData\\Local\\Temp"
+  val rootDir = System.getProperty("java.io.tmpdir")
 
   val completeClasspath = (List(
     "scala.tools.nsc.Interpreter",
